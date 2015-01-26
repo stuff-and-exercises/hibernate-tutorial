@@ -4,9 +4,10 @@
 .settings/
 .classpath
 
-# Maven files
+# Maven folders
 
 target/
+bin/
 
 # OS X files
 

@@ -14,12 +14,19 @@
         <property name="connection.password"></property>
 
         <!-- JDBC connection pool (use the built-in) -->
+        <!-- CAUTION:
+        The built-in Hibernate connection pool is in no way intended for production
+        use. It lacks several features found on any decent connection pool. -->
         <property name="connection.pool_size">1</property>
 
         <!-- SQL dialect -->
         <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
 
         <!-- Enable Hibernate's automatic session context management -->
+        <!-- NOTE:
+        Hibernate offers three methods of current session tracking. The "thread" based
+        method is not intended for production use; it is merely useful for prototyping
+        and tutorials such as this one. -->
         <property name="current_session_context_class">thread</property>
 
         <!-- Disable the second-level cache  -->
