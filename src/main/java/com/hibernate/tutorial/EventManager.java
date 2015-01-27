@@ -18,8 +18,7 @@ public class EventManager {
             mgr.createAndStoreEvent("My Event", new Date());
         } else if (args[0].equals("list")) {
             List<Event> events = mgr.listEvents();
-            for (int i = 0; i < events.size(); i++) {
-                Event theEvent = (Event) events.get(i);
+            for (Event theEvent : events) {
                 System.out.println(
                         "Event: " + theEvent.getTitle() + " Time: " + theEvent.getDate()
                 );
